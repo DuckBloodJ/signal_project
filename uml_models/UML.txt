@@ -1,0 +1,9 @@
+This UML class diagram is centered around the DataStorage class, with data from two sources passing through it. 
+
+First, data collected from medical devices by the DataListener class, passes through the DataSourceAdapter class. It is then sent to the AlertGenerator class to check for any anomalies and forwarded to the DataStorage class for storage in the database. 
+
+If an anomaly is detected, the information is sent to the AlertManager class, which identifies the type of anomaly and forwards it to the appropriate department in the hospital. 
+
+Secondly, doctors querying patient information, send the patient's number through the PatientIdentifier class and IdentityManager class to verify accuracy. Once confirmed, it is sent to the DataStorage class and the corresponding patient data is retrieved from the database.
+
+For the UML sequence diagram, the AlertGenerator class first generates the alert. Then the Alert is passed to the AlertManager class to specify the type of alert. After that, the AlertManager object would send the alert to the corresponding department, and nurse would confirm and resolve the alert.
